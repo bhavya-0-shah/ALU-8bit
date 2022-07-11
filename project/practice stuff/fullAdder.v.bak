@@ -1,0 +1,24 @@
+module fullAdder 
+(
+input A,
+input B,
+input Cin,
+output S,
+output Cout
+); 
+
+
+wire and1out;
+wire and2out;
+wire and3out;
+ 
+
+xor(S,A,B,Cin);
+and(and1out,A,Cin);
+and(and2out,A,B);
+and(and3out,B,Cin);
+
+or(Cout,and1out,and2out,and3out);
+
+				  
+endmodule

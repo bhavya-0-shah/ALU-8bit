@@ -1,0 +1,19 @@
+VERILOG
+
+if input is 2 bit and out put is 3 bit we use contactation {} to tell that it is one single data
+
+1'b1 says that it is 1 and it is on bit where first 1 represents the no of bits b is for binary
+and the last no represents the value
+
+$singed(A) take A as as signed number
+
+
+
+
+
+
+
+
+
+
+

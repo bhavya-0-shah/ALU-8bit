@@ -1,0 +1,9 @@
+// first code
+
+module myAndGate (input in1,
+                  input in2,
+				  output out
+				  ); 
+and(out,in1,in2);    //whatever written first is the input rest all output     
+
+endmodule

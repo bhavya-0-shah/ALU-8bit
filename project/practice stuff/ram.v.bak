@@ -1,0 +1,31 @@
+module ram
+#(parameter ADDR WIDTH = 4,
+  parameter DATA WIDTH = 32,
+  parameter DEPTH = 16
+)
+
+( input clk,
+  input [ADDR_WIDTH-1:0] addr,
+  input [DATA_WIDTH-1:0] writedata,
+  input cs,
+  input we,
+  input oe
+  output reg [DATA_WIDTH-1:0] readdata,
+);
+
+reg [DATA WIDTH-1:0] mem [DEPTH];
+
+always @ (posedge clk) 
+begin
+if (cs & we & !oe)
+mem[addr] <= writedata;
+end
+
+always @ (posedge clk) 
+begin
+if (cs & !we & oe)
+readdata <= mem[addr];
+end
+
+
+endmodule
